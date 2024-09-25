@@ -1,0 +1,92 @@
+/* General Styles */
+ion-header {
+  --background: #000; /* Color de fondo del encabezado */
+  --color: #fff; /* Color del texto del encabezado */
+}
+
+/* Container Styles */
+#container {
+  padding: 16px;
+  max-width: 100%; /* Ajustar el ancho al 100% para pantallas pequeñas */
+  margin: 0; /* Eliminar el margen automático */
+  background-color: #1e1e1e; /* Fondo del formulario en gris oscuro */
+  border-radius: 0; /* Eliminar bordes redondeados para pantallas pequeñas */
+  box-shadow: none; /* Eliminar la sombra en pantallas pequeñas */
+  height: 100vh; /* Hacer que el contenedor ocupe el 100% de la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar el formulario verticalmente */
+}
+
+/* Ajustar el contenedor del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Asegurar que el formulario use el 100% del ancho disponible */
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 16px;
+}
+
+/* Label Styles */
+ion-label {
+  color: #fff; /* Color del texto del label */
+  margin-bottom: 8px; /* Incrementa el espaciado debajo del label para mejorar la visibilidad */
+  font-size: 18px; /* Tamaño de la fuente del label aumentado */
+  font-weight: bold; /* Aumenta el peso de la fuente para que sea más visible */
+}
+
+
+/* Ajustar los ítems del formulario */
+ion-item {
+  --inner-padding-end: 16px; /* Padding dentro del ion-item */
+  --padding-start: 0; /* Eliminar padding a la izquierda */
+  --padding-end: 0; /* Eliminar padding a la derecha */
+  margin-bottom: 16px; /* Espaciado entre los elementos del formulario */
+  display: flex;
+  align-items: center; /* Alinear verticalmente el contenido del ion-item */
+}
+
+/* Ajustar los inputs */
+ion-input,
+ion-select {
+  --padding-start: 12px; /* Padding interno del input */
+  --padding-end: 12px;
+  width: 100%; /* Asegura que los campos tengan el mismo ancho */
+}
+
+/* Button Styles */
+ion-button {
+  background-color: #000; /* Color de fondo del botón en negro */
+  color: #fff; /* Color del texto del botón en blanco */
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Asegurar que el botón use el 100% del ancho disponible */
+  margin-top: 16px; /* Espaciado arriba del botón */
+}
+
+ion-button:disabled {
+  background-color: #555; /* Color de fondo del botón deshabilitado en gris oscuro */
+  cursor: not-allowed;
+}
+
+ion-button:not(:disabled):hover {
+  background-color: #333; /* Color de fondo del botón al pasar el ratón en gris oscuro */
+}
+
+/* Ajustar select para mantener estilo */
+select {
+  width: 100%; /* Asegura que el select tenga el mismo ancho */
+  background-color: #333; /* Fondo del select en gris oscuro */
+  color: #fff; /* Texto en blanco */
+  border: 1px solid #333; /* Borde en gris oscuro */
+  border-radius: 4px;
+  padding: 12px;
+}
+  

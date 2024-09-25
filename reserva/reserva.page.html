@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'RESERVA_DE_HORA' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="reservas-container">
+    <div class="header-section">
+      <a href="https://youtu.be/rt_lr71nQb4?si=ni6paOv6I7OZbEIO" target="_blank" class="qr-link">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.youtube.com" alt="{{ 'QR_CODE' | translate }}" class="qr-code">
+      </a>
+      <div class="title-section">
+        <h1>{{ 'RESERVA_PARA' | translate }}</h1>
+        <h1>{{ 'ELECCIONES' | translate }}</h1>
+        <h2>{{ 'PRESIDENCIAL' | translate }}</h2>
+      </div>
+    </div>
+    
+    <h2 class="subtitle">{{ 'DATOS_DE_RESERVA' | translate }}</h2>
+    
+    <div class="data-item">
+      <span class="label">{{ 'NOMBRE_COMPLETO' | translate }}:</span>
+      <span class="value">{{ 'NOMBRE_COMPLETO_VALUE' | translate }}</span>
+    </div>
+    <div class="data-item">
+      <span class="label">{{ 'RUT' | translate }}:</span>
+      <span class="value">{{ 'RUT_VALUE' | translate }}</span>
+    </div>
+    <div class="data-item">
+      <span class="label">{{ 'FECHA' | translate }}:</span>
+      <span class="value">{{ 'FECHA_VALUE' | translate }}</span>
+    </div>
+    <div class="data-item">
+      <span class="label">{{ 'HORA' | translate }}:</span>
+      <span class="value">{{ 'HORA_VALUE' | translate }}</span>
+    </div>
+    <div class="data-item">
+      <span class="label">{{ 'LOCAL_DE_VOTACION' | translate }}:</span>
+      <span class="value">Centro Cultural</span>
+    </div>
+    <div class="data-item">
+      <span class="label">{{ 'MESA_DE_VOTACION' | translate }}:</span>
+      <span class="value">{{ 'MESA_DE_VOTACION_VALUE' | translate }}</span>
+    </div>
+  </div>
+</ion-content>

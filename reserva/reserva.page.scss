@@ -1,0 +1,84 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+  }
+  
+  /* Contenedor principal para la página de reservas */
+  .reservas-container {
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh; /* Usa toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+  }
+  
+  /* Estilo para la sección del encabezado */
+  .header-section {
+    display: flex;
+    align-items: center; /* Centra verticalmente el QR y el texto */
+    margin-bottom: 20px;
+  }
+  
+  .qr-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el QR y el texto horizontalmente */
+    margin-right: 20px; /* Margen para separación del texto */
+  }
+  
+  .qr-code {
+    width: 200px; /* Tamaño del QR Code */
+    height: auto;
+  }
+  
+  .title-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .title-section h1, .title-section h2 {
+    margin: 0;
+  }
+  
+  .title-section h1 {
+    font-size: 2em; /* Tamaño del título principal */
+  }
+  
+  .title-section h2 {
+    font-size: 1.5em; /* Tamaño del subtítulo */
+  }
+  
+  /* Estilo para el subtítulo "Datos de Reserva" */
+  .subtitle {
+    text-align: center;
+    margin-bottom: 30px; /* Espaciado vertical debajo del subtítulo */
+    font-size: 2em; /* Tamaño aumentado del subtítulo */
+  }
+  
+  /* Estilo para los datos de reserva */
+  .data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los datos a la izquierda */
+    width: 100%; /* Usa todo el ancho disponible */
+  }
+  
+  .data-item {
+    margin-bottom: 25px; /* Separación vertical entre los datos */
+    font-size: 1.4em; /* Tamaño aumentado del texto de los datos */
+    width: 100%; /* Usa todo el ancho disponible */
+  }
+  
+  .data-item .label {
+    font-weight: bold;
+  }
+  
+  .data-item .value {
+    margin-left: 10px;
+  }
+    

@@ -1,0 +1,162 @@
+/* src/app/valorar/valorar.page.scss */
+.full-screen-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    background: #f2f2f2; /* Fondo gris claro */
+    height: 100vh; /* Ocupa toda la altura de la ventana gráfica */
+    width: 100vw; /* Ocupa todo el ancho de la ventana gráfica */
+    padding: 0; /* Elimina el padding */
+  }
+  
+  .rating-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    padding: 20px; /* Padding para separar el contenido de los bordes */
+  }
+  
+  .rating-section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Color del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil para un efecto llamativo */
+  }
+  
+  .stars-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Espacio arriba y abajo de las estrellas */
+  }
+  
+  .star-icon {
+    font-size: 50px; /* Tamaño de la estrella */
+    color: #f4c542; /* Color dorado para las estrellas */
+    margin: 0 10px; /* Espaciado entre estrellas */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para efectos */
+  }
+  
+  .star-icon:hover {
+    color: #ffcc00; /* Color dorado más brillante al pasar el ratón */
+    transform: scale(1.2); /* Efecto de zoom al pasar el ratón */
+  }
+  
+  .thank-you-message {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555; /* Color del mensaje de agradecimiento */
+    margin-top: 20px; /* Espacio encima del mensaje */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil para un efecto llamativo */
+  }
+  
+  .submit-button {
+    --background: #007bff; /* Color de fondo azul del botón */
+    --color: #fff; /* Color del texto blanco del botón */
+    --border-radius: 8px; /* Bordes redondeados del botón */
+    margin-top: 20px; /* Espacio encima del botón */
+  }
+  
+  /* Estilos y animaciones para los cuadrados */
+  .squares-container {
+    display: flex;
+    justify-content: space-between; /* Espacia los cuadrados uniformemente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 500px; /* Ancho máximo para mantener los cuadrados dentro de la vista */
+    margin-top: 30px; /* Espacio encima de los cuadrados */
+  }
+  
+  .square {
+    width: 70px; /* Ancho del cuadrado */
+    height: 70px; /* Alto del cuadrado */
+    border-radius: 10px; /* Bordes redondeados */
+    animation-duration: 2s; /* Duración de la animación */
+    animation-timing-function: ease-in-out; /* Tipo de curva de tiempo para la animación */
+    animation-iteration-count: infinite; /* Hace que la animación se repita indefinidamente */
+  }
+  
+  /* Cuadrado con animación de rebote */
+  .square1 {
+    background-color: #007bff; /* Color azul */
+    animation-name: bounce; /* Nombre de la animación */
+  }
+  
+  /* Cuadrado con animación de rotación */
+  .square2 {
+    background-color: #ff5722; /* Color naranja */
+    animation-name: rotate; /* Nombre de la animación */
+  }
+  
+  /* Cuadrado con animación de escala */
+  .square3 {
+    background-color: #4caf50; /* Color verde */
+    animation-name: scale; /* Nombre de la animación */
+  }
+  
+  /* Cuadrado con animación de pulso */
+  .square4 {
+    background-color: #9c27b0; /* Color púrpura */
+    animation-name: pulse; /* Nombre de la animación */
+  }
+  
+  /* Animaciones */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0); /* Posición inicial */
+    }
+    40% {
+      transform: translateY(-30px); /* Movimiento hacia arriba */
+    }
+    60% {
+      transform: translateY(-15px); /* Movimiento hacia abajo */
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg); /* Rotación inicial */
+    }
+    100% {
+      transform: rotate(360deg); /* Rotación completa */
+    }
+  }
+  
+  @keyframes scale {
+    0%, 100% {
+      transform: scale(1); /* Escala inicial y final */
+    }
+    50% {
+      transform: scale(1.5); /* Escala intermedia */
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1); /* Escala inicial y final */
+      opacity: 1; /* Opacidad inicial y final */
+    }
+    50% {
+      transform: scale(1.2); /* Escala intermedia */
+      opacity: 0.7; /* Opacidad intermedia */
+    }
+  }
+  
+  /* Estilos para el contenedor de la imagen */
+  .image-container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    margin-top: 20px; /* Espacio encima del contenedor de la imagen */
+  }
+  
+  .image {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+  }
+  

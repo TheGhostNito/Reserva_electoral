@@ -1,0 +1,96 @@
+<ion-content [fullscreen]="true">
+  <ion-app>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="white">
+          <ion-title>{{ 'MENU' | translate }}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        <!-- Aplicamos una clase personalizada para controlar el espaciado -->
+        <ion-list class="no-spacing">
+
+          
+          
+          <!-- Opción para Consultar Local de votación -->
+          <ion-item button (click)="openVotingLocation()">
+            <ion-icon slot="start" name="location"></ion-icon>
+            <ion-label>{{ 'VOTING_LOCATION' | translate }}</ion-label>
+          </ion-item> 
+
+          <!-- Opción para Reservas -->
+          <ion-item class="no-spacing" button routerLink="/reserva">
+            <ion-icon slot="start" name="calendar"></ion-icon>
+            <ion-label>{{ 'RESERVAS' | translate }}</ion-label>
+          </ion-item>
+
+           <!-- Opción para Valorar -->
+          <ion-item class="no-spacing" button routerLink="/valorar">
+            <ion-icon slot="start" name="star"></ion-icon>
+            <ion-label>{{ 'VALORAR' | translate }}</ion-label>
+          </ion-item>
+
+
+          <!-- Opción de Configuración -->
+          <ion-item class="no-spacing" button (click)="openSettings()">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label>{{ 'CONFIGURACION' | translate }}</ion-label>
+          </ion-item>
+
+  
+
+        </ion-list>
+
+      </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>{{ 'RESERVA_DE_HORA' | translate }}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <div id="container">
+        <div class="item">
+          <div class="text-container">
+            <strong>{{ 'PRESIDENTE' | translate }}</strong>
+            <p>23/11/2024</p>
+          </div>
+          <button id="btn-presidente" class="action-button color-cycle" (click)="navigateToBeta()">{{ 'RESERVAR' | translate }}</button>
+        </div>
+        <div class="item">
+          <div class="text-container">
+            <strong>{{ 'ALCALDE' | translate }}</strong>
+            <p>23/11/2024</p>
+          </div>
+          <button id="btn-alcalde" class="action-button slide-left" (click)="navigateToBeta()">{{ 'RESERVAR' | translate }}</button>
+        </div>
+        <div class="item">
+          <div class="text-container">
+            <strong>{{ 'CONCEJALES' | translate }}</strong>
+            <p>23/11/2024</p>
+          </div>
+          <button id="btn-concejales" class="action-button bounce" (click)="navigateToBeta()">{{ 'RESERVAR' | translate }}</button>
+        </div>
+        <div class="item">
+          <div class="text-container">
+            <strong>{{ 'DIPUTADOS' | translate }}</strong>
+            <p>23/11/2024</p>
+          </div>
+          <button id="btn-diputados" class="action-button pulse-color" (click)="navigateToBeta()">{{ 'RESERVAR' | translate }}</button>
+        </div>
+        <div class="item">
+          <div class="text-container">
+            <strong>{{ 'SENADORES' | translate }}</strong>
+            <p>23/11/2024</p>
+          </div>
+          <button id="btn-senadores" class="action-button rotate-color" (click)="navigateToBeta()">{{ 'RESERVAR' | translate }}</button>
+        </div>
+      </div>
+    </div>
+  </ion-app>
+</ion-content>

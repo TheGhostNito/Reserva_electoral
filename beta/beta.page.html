@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ 'RESERVATION' | translate }}<br> 
+      <small>{{ 'RESERVA_DE_HORA' | translate }}</small>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="container">
+  <form #reservationForm="ngForm">
+    <ion-item>
+      <ion-label>{{ 'FIRST_NAME' | translate }}</ion-label>
+      <ion-input
+        type="text"
+        placeholder="{{ 'FIRST_NAME_PLACEHOLDER' | translate }}"
+        [(ngModel)]="formData.firstName"
+        name="firstName"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{ 'LAST_NAME' | translate }}</ion-label>
+      <ion-input
+        type="text"
+        placeholder="{{ 'LAST_NAME_PLACEHOLDER' | translate }}"
+        [(ngModel)]="formData.lastName"
+        name="lastName"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{ 'RUT' | translate }}</ion-label>
+      <ion-input
+        type="text"
+        placeholder="{{ 'RUT_PLACEHOLDER' | translate }}"
+        [(ngModel)]="formData.rut"
+        name="rut"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{ 'DOCUMENT_NUMBER' | translate }}</ion-label>
+      <ion-input
+        type="text"
+        placeholder="{{ 'DOCUMENT_NUMBER_PLACEHOLDER' | translate }}"
+        [(ngModel)]="formData.documentNumber"
+        name="documentNumber"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{ 'TIME' | translate }}</ion-label>
+      <ion-select
+        id="time"
+        [(ngModel)]="formData.time"
+        name="time"
+        placeholder="{{ 'SELECT_TIME_PLACEHOLDER' | translate }}"
+        required
+        cancelText="{{ 'CANCELAR' | translate }}"
+        okText="{{ 'ACEPTAR' | translate }}"
+      >
+        <ion-select-option *ngFor="let option of timeOptions" [value]="option">
+          {{ option }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button
+      expand="full"
+      id="generateQR"
+      [disabled]="!reservationForm.form.valid"
+      (click)="generateQRCode()"
+    >
+      {{ 'GENERATE_QR' | translate }}
+    </ion-button>
+  </form>
+</ion-content>
+
+
