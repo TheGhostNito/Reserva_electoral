@@ -5,15 +5,15 @@ import { IonicModule } from '@ionic/angular';
 
 import { BetaPage } from './beta.page';
 import { BetaPageRoutingModule } from './beta-routing.module';
-import { TranslateModule } from '@ngx-translate/core'; // Asegúrate de importar esto
-
+import { TranslateModule } from '@ngx-translate/core'; 
+ 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     BetaPageRoutingModule,
-    TranslateModule // Asegúrate de incluir esto
+    TranslateModule 
   ],
   declarations: [BetaPage]
 })
