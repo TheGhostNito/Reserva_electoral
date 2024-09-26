@@ -4,7 +4,7 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { HttpClientModule, HttpClient } from '@angular/common/http'; // Importar HttpClientModule
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core'; // Importar TranslateModule
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core'; // Importacion para traductor
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'; // Importar TranslateHttpLoader
 
 import { AppComponent } from './app.component';
@@ -21,7 +21,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule, // Asegurarse de que esté importado HttpClientModule
+    HttpClientModule, 
     TranslateModule.forRoot({ // Asegurarse de que TranslateModule está configurado
       loader: {
         provide: TranslateLoader,
